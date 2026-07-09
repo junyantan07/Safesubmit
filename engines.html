@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SafeSubmit — Core Engines</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <img src="brand-icon-img.png" alt="SafeSubmit logo" class="nav-logo-img" style="height:36px;width:auto;">
+        <div class="nav-title">SafeSubmit <span class="highlight">Shield</span></div>
+      </div>
+
+      <div class="nav-menu">
+        <a href="index.html">Overview</a>
+        <a href="extensions.html">Custom Integrations</a>
+        <a href="engines.html">Core Engines</a>
+        <a href="architecture.html">Architecture</a>
+        <a href="sandbox.html" class="nav-cta">Launch Chatbot</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="landing-features">
+      <div class="section-heading">
+        <h2>Multi-Channel Deep Vector Analysis Engine</h2>
+        <p>ScanCore's engine uses specialized vector encoders per channel to ensure sensitive content is detected accurately while preserving privacy guarantees.</p>
+      </div>
+
+      <div class="features-grid">
+        <article class="feature-card">
+          <div class="card-icon">📝</div>
+          <h3>Plaintext Filtering</h3>
+          <p>
+            Token-aware filtering with deterministic pattern rules and ML-assisted classifiers.
+          </p>
+          <p style="color:#94a3b8;margin-top:8px;">
+            Features:
+          </p>
+          <ul style="margin-top:8px;color:#94a3b8;">
+            <li>High-throughput token scanning with context windows</li>
+            <li>Adaptive rule sets for PII/credentials (emails, SSNs, keys)</li>
+            <li>Confidence scoring and redaction offsets</li>
+          </ul>
+        </article>
+
+        <article class="feature-card">
+          <div class="card-icon">📚</div>
+          <h3>Document Compliance</h3>
+          <p>Multi-format parsing for DOCX, PDF, and structured text to extract sections for compliance checks.</p>
+          <ul style="margin-top:8px;color:#94a3b8;">
+            <li>Preserves document structure and metadata</li>
+            <li>Section-aware policy enforcement (headers, footers, attachments)</li>
+            <li>Exportable compliance reports and suggested redactions</li>
+          </ul>
+        </article>
+
+        <article class="feature-card">
+          <div class="card-icon">🔎</div>
+          <h3>Image OCR Extraction</h3>
+          <p>Robust OCR preprocessor that converts imagery to searchable text while retaining bounding boxes and confidence scores.</p>
+          <ul style="margin-top:8px;color:#94a3b8;">
+            <li>Multi-language text detection</li>
+            <li>Layout-aware extraction (tables, captions)</li>
+            <li>Image cleanup and auto-scaling for higher OCR accuracy</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="platform-footer">
+    Engine details • SafeSubmit © <span id="year-engines"></span>
+  </footer>
+
+  <script>document.getElementById('year-engines').textContent = new Date().getFullYear();</script>
+</body>
+</html>

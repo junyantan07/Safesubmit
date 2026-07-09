@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SafeSubmit Shield — Enterprise LLM Security Platform</title>
+  <link rel="stylesheet" href="./style.css" />
+  
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <img src="../brand-icon-img.png" alt="SafeSubmit logo" class="nav-logo-img" style="height:36px;width:auto;">
+        <span class="nav-title">SafeSubmit <span class="highlight">Shield</span></span>
+      </div>
+      <div class="nav-menu">
+        <a href="#hero">Overview</a>
+        <a href="../extensions.html">Custom Integrations</a>
+        <a href="#features">Core Engines</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#workspace" class="nav-cta">Launch Sandbox</a>
+      </div>
+    </div>
+  </nav>
+
+  <header id="hero" class="landing-hero">
+    <div class="hero-content">
+      <span class="badge">SafeSubmit ScanCore Engine v2.1</span>
+      <h1>Guard Your Corporate AI Workflows Against Dangerous Leaks</h1>
+      <p>Secure prompt submissions, source logs, and telemetry assets before they touch public Large Language Models. Intercept API credentials, database strings, and personal information automatically.</p>
+      <div class="hero-actions">
+        <a href="#workspace" class="cta-button primary">Run Live Inspection</a>
+        <a href="#features" class="cta-button secondary">Explore Features</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="features" class="landing-features">
+    <div class="section-heading">
+      <h2>Multi-Channel Deep Vector Analysis</h2>
+      <p>A unified compliance engine providing custom perimeter scanning for every development pipeline asset type.</p>
+    </div>
+    
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="card-icon">📝</div>
+        <h3>Plaintext Filtering</h3>
+        <p>Isolates hardcoded application keys, authorization tokens, cloud environments, passwords, and explicit personal identifiers before submission.</p>
+      </div>
+      <div class="feature-card">
+        <div class="card-icon">📎</div>
+        <h3>Document Compliance</h3>
+        <p>Parses structural payload blocks, corporate summaries, and document extensions directly to strip leakage vectors instantly.</p>
+      </div>
+      <div class="feature-card">
+        <div class="card-icon">🖼️</div>
+        <h3>Image OCR Extraction</h3>
+        <p>Scans systemic screenshots, architectures, and dashboard diagrams via programmatic character nodes to prevent structural credential leakages.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="architecture" class="landing-pipeline">
+    <div class="section-heading">
+      <h2>How ScanCore Shield Validates Information</h2>
+      <p>A resilient multi-tier verification process operating under your team's absolute visibility.</p>
+    </div>
+    <div class="pipeline-flow">
+      <div class="step">
+        <div class="step-badge">
+          <span class="step-num">1</span>
+        </div>
+        <h4>Channel Classification</h4>
+        <p>The client application identifies the target medium and conditions the structural text string formatting vectors.</p>
+      </div>
+      <div class="step">
+        <div class="step-badge">
+          <span class="step-num">2</span>
+        </div>
+        <h4>Proxy Serialization</h4>
+        <p>The Python server wraps transmission endpoints securely, providing standard authentication handling blocks.</p>
+      </div>
+      <div class="step">
+        <div class="step-badge">
+          <span class="step-num">3</span>
+        </div>
+        <h4>ScanCore Assessment</h4>
+        <p>Botpress workflow trees run mock validation sweeps, returning actionable vulnerability matrix tracking metrics instantly.</p>
+      </div>
+    </div>
+  </section>
+
+  <main id="workspace" class="app-workspace-section">
+    <div class="section-heading">
+      <h2>ScanCore Terminal Sandbox</h2>
+      <p>Interact with the operational system pipeline via the integrated secure client simulator module below.</p>
+    </div>
+    
+    <div id="root" class="root-container"></div>
+  </main>
+
+  <footer class="platform-footer">
+    <p>&copy; 2026 SafeSubmit Shield Project Portfolio. Running on Secure Local Python Proxy & Botpress ScanCore Engine Node Link.</p>
+  </footer>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

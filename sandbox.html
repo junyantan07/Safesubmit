@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SafeSubmit — Sandbox</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <img src="brand-icon-img.png" alt="SafeSubmit logo" class="nav-logo-img" style="height:36px;width:auto;">
+        <div class="nav-title">SafeSubmit <span class="highlight">Shield</span></div>
+      </div>
+
+      <div class="nav-menu">
+        <a href="index.html">Overview</a>
+        <a href="extensions.html">Custom Integrations</a>
+        <a href="engines.html">Core Engines</a>
+        <a href="architecture.html">Architecture</a>
+        <a href="sandbox.html" class="nav-cta">Launch Chatbot</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="app-workspace-section">
+      <div class="section-heading">
+        <h2>Live Sandbox — SafeSubmit Shield</h2>
+        <p>Interact with the SafeSubmit chatbot to run ScanCore checks on text, files or images.</p>
+      </div>
+
+      <!-- React app will mount here -->
+      <div id="root" class="root-container"></div>
+    </section>
+  </main>
+
+  <footer class="platform-footer">
+    Sandbox • SafeSubmit © <span id="year-sbx"></span>
+  </footer>
+
+  <!-- React & ReactDOM (UMD builds) -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+  <!-- Mount app (user's app.js expects React and ReactDOM globals) -->
+  <script type="module" src="./app.js"></script>
+
+  <script>document.getElementById('year-sbx').textContent = new Date().getFullYear();</script>
+</body>
+</html>

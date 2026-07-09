@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SafeSubmit — Architecture</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <!-- Replaced emoji logo with brand image -->
+        <img src="brand-icon-img.png" alt="SafeSubmit logo" class="nav-logo-img" style="height:36px;width:auto;">
+        <div class="nav-title">SafeSubmit <span class="highlight">Shield</span></div>
+      </div>
+
+      <div class="nav-menu">
+        <a href="index.html">Overview</a>
+        <a href="extensions.html">Custom Integrations</a>
+        <a href="engines.html">Core Engines</a>
+        <a href="architecture.html">Architecture</a>
+        <a href="sandbox.html" class="nav-cta">Launch Chatbot</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="landing-pipeline">
+      <div class="section-heading">
+        <h2>ScanCore Data Validation Lifecycle</h2>
+        <p>Detailed step-by-step documentation describing how content flows through ScanCore.</p>
+      </div>
+
+      <div class="pipeline-flow">
+        <div class="step">
+          <div class="step-badge"><span class="step-num">1</span></div>
+          <h4>Channel Classification</h4>
+          <p>
+            Incoming content is analyzed to determine channel:
+            <strong>plaintext, files (txt/md), or images</strong>. Classification triggers the correct parsing pipeline and selects encoder models tuned for that channel.
+          </p>
+          <p>
+            Key considerations:
+          </p>
+          <ul style="margin-top:8px;color:#94a3b8;">
+            <li>Heuristic headers and mimetype detection</li>
+            <li>User agent and metadata influence</li>
+            <li>Auto-fallback strategies for ambiguous payloads</li>
+          </ul>
+        </div>
+
+        <div class="step">
+          <div class="step-badge"><span class="step-num">2</span></div>
+          <h4>Proxy Serialization</h4>
+          <p>
+            Content is normalized into a canonical proxy object that preserves context and provenance.
+          </p>
+          <p>Serialization includes:</p>
+          <ul style="margin-top:8px;color:#94a3b8;">
+            <li>Tokenization and positional offsets</li>
+            <li>Embedded metadata (source, timestamps)</li>
+            <li>Vector embedders per-channel and chunking strategies</li>
+          </ul>
+        </div>
+
+        <div class="step">
+          <div class="step-badge"><span class="step-num">3</span></div>
+          <h4>ScanCore Assessment</h4>
+          <p>
+            The assessment engine runs multi-vector similarity checks, policy evaluation, and severity scoring. Outputs include verdicts, evidence spans and recommended redactions.
+          </p>
+          <p>Outputs:</p>
+          <ul style="margin-top:8px;color:#94a3b8;">
+            <li>Structured assessment JSON (status, risk, excerpts)</li>
+            <li>Confidence and rationale traces</li>
+            <li>Integrations for reporting and enforcement</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="platform-footer">
+    Architecture • SafeSubmit © <span id="year-arch"></span>
+  </footer>
+
+  <script>document.getElementById('year-arch').textContent = new Date().getFullYear();</script>
+</body>
+</html>

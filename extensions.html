@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SafeSubmit — Custom Integrations</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <img src="brand-icon-img.png" alt="SafeSubmit logo" class="nav-logo-img" style="height:36px;width:auto;">
+        <div class="nav-title">SafeSubmit <span class="highlight">Shield</span></div>
+      </div>
+
+      <div class="nav-menu">
+        <a href="index.html">Overview</a>
+        <a href="extensions.html">Custom Integrations</a>
+        <a href="engines.html">Core Engines</a>
+        <a href="architecture.html">Architecture</a>
+        <a href="sandbox.html" class="nav-cta">Launch Chatbot</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="landing-features">
+      <div class="section-heading">
+        <h2>Extend SafeSubmit Across Your Workflow</h2>
+        <p>SafeSubmit custom integrations let you run ScanCore outside the browser with chat integrations and bot-assisted scanning tools.</p>
+      </div>
+
+      <div class="features-grid">
+        <article class="feature-card">
+          <div class="card-icon">🤖</div>
+          <h3>Telegram Bot</h3>
+          <p>Use the SafeSubmit bot on Telegram to submit content for instant scanning and receive compliance feedback in chat.</p>
+          <ul style="margin-top:12px;color:#94a3b8;">
+            <li>Send text, files, or links safely</li>
+            <li>Receive risk summaries and redaction hints</li>
+            <li>Built for fast team review and audit-ready logging</li>
+          </ul>
+          <a href="https://t.me/safesubmit_bot" class="cta-button open-button" target="_blank" rel="noopener noreferrer">Open Telegram Bot</a>
+        </article>
+
+        <article class="feature-card">
+          <div class="card-icon">💬</div>
+          <h3>Discord Bot</h3>
+          <p>Connect with SafeSubmit on Discord to scan content and receive compliance guidance directly inside your server.</p>
+          <ul style="margin-top:12px;color:#94a3b8;">
+            <li>Submit messages and attachments securely</li>
+            <li>Get analysis summaries in Discord threads</li>
+            <li>Great for team collaboration and review</li>
+          </ul>
+          <a href="https://discord.gg/msWpjbavFX" class="cta-button open-button" target="_blank" rel="noopener noreferrer">Open Discord Bot</a>
+        </article>
+
+        <article class="feature-card">
+          <div class="card-icon">⚙️</div>
+          <h3>Platform Integrations</h3>
+          <p>Future-safe connectors to embed SafeSubmit directly into your development pipeline and messaging workflows.</p>
+          <ul style="margin-top:12px;color:#94a3b8;">
+            <li>Chatbot-enabled scanning for teams</li>
+            <li>Secure webhook and API bridge design</li>
+            <li>Lightweight deployment for private environments</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="platform-footer">
+    Custom Integrations • SafeSubmit © <span id="year-ext"></span>
+  </footer>
+
+  <script>document.getElementById('year-ext').textContent = new Date().getFullYear();</script>
+</body>
+</html>
