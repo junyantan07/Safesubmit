@@ -791,21 +791,97 @@ body {
   font-size: 0.85rem;
 }
 
-/* Responsive Media Controls for Mobile Displays */
+/* Responsive Media Controls for Mobile Displays with Hamburger Sidebar Override */
 @media (max-width: 768px) {
-  body { padding-top: 60px; font-size: 16px; }
-  .navbar { height: 60px; }
-  .nav-container { padding: 0 12px; }
-  .nav-menu {
-    display: flex;
-    gap: 12px;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    padding-bottom: 6px;
+  body { 
+    padding-top: 60px; 
+    font-size: 16px; 
   }
-  .nav-menu::-webkit-scrollbar { display: none; }
-  .nav-menu a { white-space: nowrap; }
+  
+  .navbar { 
+    height: 60px; 
+  }
+  
+  .nav-container { 
+    padding: 0 16px; 
+  }
 
+  /* 1. Show the Hamburger Button Toggle on Mobile Screen sizes */
+  .mobile-menu-toggle {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 24px;
+    height: 18px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1100;
+    padding: 0;
+  }
+
+  .mobile-menu-toggle span {
+    width: 24px;
+    height: 2px;
+    background-color: #f8fafc;
+    border-radius: 2px;
+    transition: all 0.25s ease-in-out;
+  }
+
+  /* Hamburger transformation animations when active */
+  .mobile-menu-toggle.active span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+  }
+  .mobile-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .mobile-menu-toggle.active span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+  }
+
+  /* 2. Re-architect the Menu Wrapper into a hidden off-screen Sidebar Panel */
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -280px; /* Completely hidden off-screen by default */
+    width: 280px;
+    height: 100vh;
+    background: #0C0C54; /* Deep card background to look integrated */
+    border-left: 1px solid rgba(255, 255, 255, 0.08);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0;
+    padding: 80px 24px 24px 24px;
+    transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1050;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+  }
+
+  /* Sliding trigger class toggled by JS */
+  .nav-menu.active {
+    right: 0;
+  }
+
+  /* Style items as vertical stack selections inside sidebar */
+  .nav-menu a {
+    width: 100%;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    font-size: 1.05rem;
+    display: block;
+    white-space: nowrap;
+  }
+
+  .nav-menu a.nav-cta {
+    margin-top: 24px;
+    text-align: center;
+    background: var(--accent-pink);
+    border-radius: 8px;
+    padding: 12px;
+  }
+
+  /* 3. Global template adjustment defaults */
   .hero-content h1 { font-size: clamp(1.75rem, 6vw, 2.25rem); }
   .hero-actions { flex-direction: column; gap: 12px; }
   .pipeline-flow { flex-direction: column; align-items: center; gap: 32px; }
@@ -815,13 +891,12 @@ body {
     max-height: calc(100vh - 100px);
     width: 100%;
   }
-
   .chatbot-message-row.bot .chatbot-bubble,
-  .chatbot-bubble.loading {
-    max-width: calc(100% - 38px);
-  }
+  .chatbot-bubble.loading { max-width: calc(100% - 38px); }
+  .chatbot-message-row.user .chatbot-bubble { max-width: 88%; }
+}
 
-  .chatbot-message-row.user .chatbot-bubble {
-    max-width: 88%;
-  }
+/* Base style addition for desktop fallback layer safety */
+.mobile-menu-toggle {
+  display: none;
 }

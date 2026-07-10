@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
+<!-- UPDATED FIXED NAVIGATION BAR -->
   <nav class="navbar">
     <div class="nav-container">
       <div class="nav-brand">
@@ -14,7 +15,15 @@
         <div class="nav-title">SafeSubmit <span class="highlight">Shield</span></div>
       </div>
 
-      <div class="nav-menu">
+      <!-- Hamburger Menu Toggle Button for Mobile Screens -->
+      <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" id="mobile-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- The Navigation Links Panel (Acts as desktop header row OR mobile sidebar) -->
+      <div class="nav-menu" id="nav-menu-panel">
         <a href="index.html">Overview</a>
         <a href="extensions.html">Custom Integrations</a>
         <a href="engines.html">Core Engines</a>
@@ -78,5 +87,26 @@
   </footer>
 
   <script>document.getElementById('year-engines').textContent = new Date().getFullYear();</script>
+  <!-- SMALL DYN-JS INTERCEPTOR: Place this right above the closing </body> tag -->
+  <script>
+    const mobileToggle = document.getElementById('mobile-toggle');
+    const navMenuPanel = document.getElementById('nav-menu-panel');
+
+    if (mobileToggle && navMenuPanel) {
+      mobileToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        mobileToggle.classList.toggle('active');
+        navMenuPanel.classList.toggle('active');
+      });
+
+      // Safely close the sidebar if clicking anywhere outside the menu on mobile layout viewports
+      document.addEventListener('click', (e) => {
+        if (!navMenuPanel.contains(e.target) && !mobileToggle.contains(e.target)) {
+          mobileToggle.classList.remove('active');
+          navMenuPanel.classList.remove('active');
+        }
+      });
+    }
+  </script>
 </body>
 </html>
