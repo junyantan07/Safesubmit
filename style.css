@@ -431,8 +431,14 @@ body {
 }
 
 .social-icon {
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
+  margin-top: -1px;
+}
+
+.social-button {
+  gap: 8px;
+  padding: 8px 12px;
 }
 
 .footer-socials {
