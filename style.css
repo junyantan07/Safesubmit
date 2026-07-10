@@ -433,7 +433,10 @@ body {
 .social-icon {
   width: 16px;
   height: 16px;
-  margin-top: -1px;
+  border-radius: 50%;
+  background: #000;
+  padding: 4px;
+  margin-top: 0;
 }
 
 .social-button {
