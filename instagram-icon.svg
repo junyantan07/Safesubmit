@@ -1,0 +1,10 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <radialGradient id="igGrad" cx="0.5" cy="0.5" r="0.8" gradientUnits="userSpaceOnUse" gradientTransform="translate(24 24) rotate(45) scale(1)">
+    <stop offset="0%" stop-color="#feda75"/>
+    <stop offset="30%" stop-color="#fa7e1e"/>
+    <stop offset="60%" stop-color="#d62976"/>
+    <stop offset="100%" stop-color="#962fbf"/>
+  </radialGradient>
+  <rect x="4" y="4" width="40" height="40" rx="12" fill="url(#igGrad)"/>
+  <path d="M28.5 15.5H19.5C18.1 15.5 17 16.6 17 18V30C17 31.4 18.1 32.5 19.5 32.5H28.5C29.9 32.5 31 31.4 31 30V18C31 16.6 29.9 15.5 28.5 15.5ZM24 26C21.8 26 20 24.2 20 22C20 19.8 21.8 18 24 18C26.2 18 28 19.8 28 22C28 24.2 26.2 26 24 26ZM29.5 18.5C29.8 18.5 30 18.3 30 18C30 17.7 29.8 17.5 29.5 17.5C29.2 17.5 29 17.7 29 18C29 18.3 29.2 18.5 29.5 18.5Z" fill="white"/>
+</svg>

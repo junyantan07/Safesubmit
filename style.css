@@ -424,6 +424,22 @@ body {
   gap: 12px;
 }
 
+.social-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.footer-socials {
+  margin-top: 14px;
+}
+
+
 /* Dynamic Interactive Sandbox Section Area */
 .app-workspace-section {
   background: rgba(0, 0, 0, 0.2);
