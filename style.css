@@ -421,7 +421,7 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 14px;
 }
 
 .social-button {
@@ -436,12 +436,13 @@ body {
   color: #f8fafc;
   min-width: 0;
   text-decoration: none;
-  transition: transform 0.2s ease, background 0.2s ease;
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
 }
 
 .social-button:hover {
-  background: rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.18);
   transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
 }
 
 .social-icon {
@@ -450,31 +451,23 @@ body {
   border-radius: 50%;
   background: transparent;
   padding: 0;
-  filter: brightness(1.35) saturate(1.25);
+  filter: brightness(1.25) saturate(1.2);
   mix-blend-mode: normal;
   flex-shrink: 0;
 }
 
 .footer-socials {
-  margin-top: 14px;
+  margin-top: 18px;
 }
 
 @media (max-width: 640px) {
-  .social-button {
-    width: 100%;
-    min-width: 0;
+  .app-socials {
+    gap: 12px;
   }
-}
 
-.footer-socials {
-  margin-top: 14px;
-}
-
-@media (max-width: 640px) {
   .social-button {
-    width: 100%;
-    min-width: 0;
-    justify-content: center;
+    width: 46px;
+    height: 46px;
   }
 }
 
