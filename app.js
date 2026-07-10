@@ -596,7 +596,7 @@ function App() {
     // Header
     e('header', { className: 'chatbot-header' },
       e('div', null,
-        e('h2', { style: { margin: 0, fontSize: '1.2rem' } }, 'SafeSubmit Shield'),
+        e('h2', { style: { margin: 0, fontSize: '1.2rem' } }, 'SafeSubmit'),
         e('p', { style: { margin: '2px 0 0 0', fontSize: '0.78rem', color: '#64748b' } }, 'ScanCore privacy check')
       ),
       e('span', { className: `chatbot-status${isLoading ? ' status-processing' : ''}` }, isLoading ? 'Scanning' : 'Online')

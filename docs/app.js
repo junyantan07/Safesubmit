@@ -520,7 +520,7 @@ function App() {
 
     e('header', { className: 'chatbot-header' },
       e('div', null,
-        e('h2', { style: { margin: 0, fontSize: '1.2rem' } }, 'SafeSubmit Shield'),
+        e('h2', { style: { margin: 0, fontSize: '1.2rem' } }, 'SafeSubmit'),
         e('p', { style: { margin: 0, fontSize: '0.8rem', color: '#38bdf8' } }, 'Botpress Chat API')
       ),
       e('span', { className: 'chatbot-status' }, isLoading ? 'Processing...' : 'Online')
