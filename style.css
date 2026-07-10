@@ -434,9 +434,10 @@ body {
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  mix-blend-mode: multiply;
-  background: transparent;
-  padding: 0;
+  mix-blend-mode: screen;
+  filter: brightness(1.8) contrast(1.2);
+  background: rgba(255,255,255,0.16);
+  padding: 4px;
   margin-top: 0;
 }
 
