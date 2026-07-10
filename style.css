@@ -432,7 +432,7 @@ body {
   height: 52px;
   padding: 0;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.10);
+  background: rgba(255, 255, 255, 0.08);
   color: #f8fafc;
   min-width: 0;
   text-decoration: none;
@@ -440,17 +440,17 @@ body {
 }
 
 .social-button:hover {
-  background: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.16);
   transform: translateY(-1px);
 }
 
 .social-icon {
-  width: 24px;
-  height: 24px;
+  width: 26px;
+  height: 26px;
   border-radius: 50%;
   background: transparent;
   padding: 0;
-  filter: brightness(1.25) saturate(1.2);
+  filter: brightness(1.35) saturate(1.25);
   mix-blend-mode: normal;
   flex-shrink: 0;
 }
