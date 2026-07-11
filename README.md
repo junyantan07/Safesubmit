@@ -6,7 +6,7 @@ SafeSubmit Shield is an enterprise-grade client-side security proxy and sandbox 
 
 ## 🚀 Live Demo
 View the live deployment on GitHub Pages:  
-👉 **[[SafeSubmit](safe-submit.github.io/Safesubmit/)]**
+👉 **[[SafeSubmit](https://safe-submit.github.io/Safesubmit/)]**
 
 ---
 
