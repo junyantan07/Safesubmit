@@ -154,6 +154,58 @@ body {
   display: flex;
   justify-content: center;
   gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Video Demo Section */
+.video-demo-section {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 24px;
+}
+
+.video-demo-section video {
+  width: 100%;
+  height: auto;
+  max-width: 900px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  background: #000;
+}
+
+@media (max-width: 768px) {
+  .video-demo-section {
+    margin: 40px auto;
+    padding: 0 16px;
+  }
+
+  .video-demo-section video {
+    max-width: 100%;
+    border-radius: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-demo-section {
+    margin: 30px auto;
+    padding: 0 12px;
+  }
+
+  .video-demo-section video {
+    border-radius: 8px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .cta-button {
+    width: 100%;
+  }
 }
 
 .cta-button {
