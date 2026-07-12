@@ -1,5 +1,5 @@
 const BOTPRESS_CHAT_API_URL =
-  'https://chat.botpress.cloud/7087d1e1-a11b-4dfc-962c-79dc2f99ab9d'; 
+  'https://chat.botpress.cloud/0648d88e-93af-4b95-a50e-f1d6d7306992'; 
 
 const { useState, useEffect, useRef } = React;
 const e = React.createElement;
